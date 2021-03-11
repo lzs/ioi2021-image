@@ -23,7 +23,7 @@ fi
 # Fix up date/time
 
 timedatectl set-timezone Asia/Singapore
-vmware-toolbox-cmd timesync enable
+#vmware-toolbox-cmd timesync enable
 hwclock -w
 
 # Update packages
@@ -42,8 +42,7 @@ apt -y install net-tools openssh-server ansible xvfb tinc i3lock oathtool imagem
 
 # Install packages needed by contestants
 
-apt -y install openjdk-11-jdk-headless codeblocks emacs \
-	geany gedit joe kate kdevelop nano vim vim-gtk3 \
+apt -y geany gedit joe kate kdevelop nano vim vim-gtk3 \
 	ddd valgrind visualvm ruby python3-pip konsole
 
 # Install snap packages needed by contestants
@@ -94,18 +93,18 @@ mkdir /opt/ioi/store/submissions
 mkdir /opt/ioi/config/ssh
 
 wget -O /tmp/cpptools-linux.vsix "https://github.com/microsoft/vscode-cpptools/releases/download/0.29.0/cpptools-linux.vsix"
-wget -O /tmp/vscode-java-pack.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.9.1/vspackage"
+#wget -O /tmp/vscode-java-pack.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.9.1/vspackage"
 wget -O /tmp/cpp-compile-run.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/danielpinto8zz6/vsextensions/c-cpp-compile-run/1.0.11/vspackage"
 wget -O /tmp/vscodevim.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscodevim/vsextensions/vim/1.16.0/vspackage"
 #wget -O /tmp/ms-python.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
 gunzip /tmp/vscode-java-pack.vsix.gz
-gunzip /tmp/cpp-compile-run.vsix.gz
+#gunzip /tmp/cpp-compile-run.vsix.gz
 #gunzip /tmp/vscodevim.vsix.gz
 #gunzip /tmp/ms-python.vsix.gz
 mkdir /tmp/vscode
 mkdir /tmp/vscode-extensions
 code --install-extension /tmp/cpptools-linux.vsix --extensions-dir /tmp/vscode-extensions --user-data-dir /tmp/vscode
-code --install-extension /tmp/vscode-java-pack.vsix --extensions-dir /tmp/vscode-extensions --user-data-dir /tmp/vscode
+#code --install-extension /tmp/vscode-java-pack.vsix --extensions-dir /tmp/vscode-extensions --user-data-dir /tmp/vscode
 code --install-extension /tmp/cpp-compile-run.vsix --extensions-dir /tmp/vscode-extensions --user-data-dir /tmp/vscode
 #code --install-extension /tmp/vscodevim.vsix --extensions-dir /tmp/vscode-extensions --user-data-dir /tmp/vscode
 tar jcf /opt/ioi/misc/vscode-extensions.tar.bz2 -C /tmp/vscode-extensions .
