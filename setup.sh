@@ -356,7 +356,7 @@ ssh-keyscan -H ioibackup1.ioi2020.sg >> ~/.ssh/known_hosts 2> /dev/null
 chmod 600 ~/.ssh/known_hosts
 
 # Add contest schedule
-/opt/ioi/sbin/atrun.sh schedule
+#/opt/ioi/sbin/atrun.sh schedule
 
 # Embed version number
 if [ -n "$VERSION" ] ; then
