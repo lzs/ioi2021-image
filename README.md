@@ -12,6 +12,7 @@ When Ubuntu install completes, clone or copy this repo into a local directory. E
 git clone https://github.com/gary-tang/ioi2021-image.git
 cd ioi2021-image
 sudo ./setup.sh
+sudo ./cleanup.sh
 cd ..
 rm -rf ioi2021-image
 ```
@@ -19,9 +20,9 @@ rm -rf ioi2021-image
 
 ## VM Image Finalisation
 
-Boot into install or rescure CDROM. Get to a shell and zero-out the empty space in the ext4 FS.
+Boot into install or rescure CDROM. Get to a shell (Ctrl+Alt+F2) and zero-out the empty space in the ext4 FS.
 
-$ zerofree -v /dev/sda2
+$ sudo zerofree -v /dev/sda2
 
 Shutdown the VM.
 
