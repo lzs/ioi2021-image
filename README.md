@@ -10,13 +10,15 @@ When Ubuntu install completes, clone or copy this repo into a local directory. E
 
 ```
 git clone https://github.com/gary-tang/ioi2021-image.git
+sudo -s
 cd ioi2021-image
-sudo ./setup.sh
-sudo ./cleanup.sh
+./setup.sh
+./cleanup.sh
 cd ..
 rm -rf ioi2021-image
 ```
 
+Turn off the VM when you complete the installation.
 
 ## VM Image Finalisation
 
