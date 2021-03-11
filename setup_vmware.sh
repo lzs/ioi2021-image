@@ -234,6 +234,7 @@ mkdir /etc/tinc/vpn
 mkdir /etc/tinc/vpn/hosts
 cat - <<'EOM' > /etc/tinc/vpn/tinc-up
 #!/bin/sh
+
 ifconfig $INTERFACE "$(cat /etc/tinc/vpn/ip.conf)" netmask "$(cat /etc/tinc/vpn/mask.conf)"
 route add -net 172.31.0.0/16 gw "$(cat /etc/tinc/vpn/ip.conf)"
 EOM
@@ -241,13 +242,17 @@ chmod 755 /etc/tinc/vpn/tinc-up
 
 cat - <<'EOM' > /etc/tinc/vpn/host-up
 #!/bin/sh
+
 logger -p local0.info VPN connection to $NODE $REMOTEADDRESS:$REMOTEPORT is up
+
 # Force time resync as soon as VPN starts
 systemctl restart systemd-timesyncd
+
 # Fix up DNS resolution
 resolvectl dns vpn 172.31.0.2
 resolvectl domain vpn ioi2020.sg
 systemd-resolve --flush-cache
+
 # Register something on our HTTP server to log connection
 INSTANCEID=$(cat /opt/ioi/run/instanceid.txt)
 wget -qO- https://test.ioi2020.sg/ping/$NODE-$NAME-$INSTANCEID &> /dev/null
@@ -257,6 +262,7 @@ chmod 755 /etc/tinc/vpn/host-up
 
 cat - <<'EOM' > /etc/tinc/vpn/host-down
 #!/bin/sh
+
 logger -p local0.info VPN connection to $NODE $REMOTEADDRESS:$REMOTEPORT is down
 EOM
 chmod 755 /etc/tinc/vpn/host-up
@@ -273,6 +279,7 @@ systemctl disable atd
 cat - <<EOM > /etc/systemd/system/i3lock.service
 [Unit]
 Description=Lock screen
+
 [Service]
 User=ansible
 Type=simple
