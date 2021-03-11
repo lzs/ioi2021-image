@@ -93,11 +93,11 @@ mkdir /opt/ioi/store/submissions
 mkdir /opt/ioi/config/ssh
 
 wget -O /tmp/cpptools-linux.vsix "https://github.com/microsoft/vscode-cpptools/releases/download/0.29.0/cpptools-linux.vsix"
-#wget -O /tmp/vscode-java-pack.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.9.1/vspackage"
-wget -O /tmp/cpp-compile-run.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/danielpinto8zz6/vsextensions/c-cpp-compile-run/1.0.11/vspackage"
-wget -O /tmp/vscodevim.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscodevim/vsextensions/vim/1.16.0/vspackage"
-#wget -O /tmp/ms-python.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
-gunzip /tmp/vscode-java-pack.vsix.gz
+wget -O /tmp/vscode-java-pack.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.9.1/vspackage"
+wget -O /tmp/cpp-compile-run.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/danielpinto8zz6/vsextensions/c-cpp-compile-run/1.0.11/vspackage"
+wget -O /tmp/vscodevim.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscodevim/vsextensions/vim/1.16.0/vspackage"
+#wget -O /tmp/ms-python.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
+#gunzip /tmp/vscode-java-pack.vsix.gz
 #gunzip /tmp/cpp-compile-run.vsix.gz
 #gunzip /tmp/vscodevim.vsix.gz
 #gunzip /tmp/ms-python.vsix.gz
