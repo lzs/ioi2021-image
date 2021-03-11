@@ -177,7 +177,8 @@ chmod 440 /etc/sudoers.d/01-ioi
 
 # Documentation
 
-apt -y install stl-manual openjdk-11-doc python3-doc
+#apt -y install openjdk-11-doc
+apt -y install stl-manual python3-doc
 
 # CPP Reference
 
