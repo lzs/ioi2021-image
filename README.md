@@ -22,7 +22,7 @@ Turn off the VM when you complete the installation.
 
 ## VM Image Finalisation
 
-Boot into install or rescure CDROM (change the boot order if required). Get to a shell (Ctrl+Alt+F2) and zero-out the empty space in the ext4 FS.
+Boot into install or rescue CDROM (change the boot order in the VM's BIOS if required). Get to a shell (Ctrl+Alt+F2) and zero-out the empty space in the ext4 FS.
 
 $ sudo zerofree -v /dev/sda2
 
