@@ -95,7 +95,7 @@ mkdir /opt/ioi/config/ssh
 
 ## Lines with 2 hashtags are permanently commented out!
 wget -O /tmp/cpptools-linux.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/cpptools-linux.vsix"
-wget -O /tmp/vscode-java-pack.vsix "http://mirror.edu.sg/ioi2021/vscode-items/vscjava.vscode-java-pack-0.9.1.vsix"
+wget -O /tmp/vscode-java-pack.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/vscjava.vscode-java-pack-0.9.1.vsix"
 wget -O /tmp/cpp-compile-run.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/danielpinto8zz6.c-cpp-compile-run-1.0.11.vsix"
 wget -O /tmp/vscodevim.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/vscodevim.vim-1.16.0.vsix"
 ##wget -O /tmp/ms-python.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
