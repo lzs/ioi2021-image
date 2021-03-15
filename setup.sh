@@ -42,8 +42,7 @@ apt -y install net-tools openssh-server ansible xvfb tinc i3lock oathtool imagem
 
 # Install packages needed by contestants
 
-#apt -y install openjdk-11-headless 
-apt -y install codeblocks emacs \
+apt -y install  openjdk-11-jre-headless codeblocks emacs \
 	geany gedit joe kate kdevelop nano vim vim-gtk3 \
 	ddd valgrind visualvm ruby python3-pip konsole
 
@@ -62,7 +61,7 @@ wget -O /tmp/eclipse.tar.gz "http://mirrors.neusoft.edu.cn/eclipse/technology/ep
 tar zxf /tmp/eclipse.tar.gz -C /opt
 rm /tmp/eclipse.tar.gz
 /opt/eclipse/eclipse -nosplash \
-        -application org.eclipse.equinox.p2.director \
+#        -application org.eclipse.equinox.p2.director \
         -repository http://download.eclipse.org/releases/latest/,http://download.eclipse.org/tools/cdt/releases/9.11/ \
         -destination /opt/eclipse \
         -installIU org.eclipse.cdt.feature.group
@@ -95,10 +94,10 @@ mkdir /opt/ioi/store/submissions
 mkdir /opt/ioi/config/ssh
 
 ## Lines with 2 hashtags are permanently commented out!
-wget -O /tmp/cpptools-linux.vsix "http://mirror0-cr1-9.comp.nus.edu.sg/ioi2021/vscode-items/cpptools-linux.vsix"
-wget -O /tmp/vscode-java-pack.vsix "http://mirror0-cr1-9.comp.nus.edu.sg/ioi2021/vscode-items/vscjava.vscode-java-pack-0.9.1.vsix"
-wget -O /tmp/cpp-compile-run.vsix "http://mirror0-cr1-9.comp.nus.edu.sg/ioi2021/vscode-items/danielpinto8zz6.c-cpp-compile-run-1.0.11.vsix"
-wget -O /tmp/vscodevim.vsix "http://mirror0-cr1-9.comp.nus.edu.sg/ioi2021/vscode-items/vscodevim.vim-1.16.0.vsix"
+wget -O /tmp/cpptools-linux.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/cpptools-linux.vsix"
+wget -O /tmp/vscode-java-pack.vsix "http://mirror.edu.sg/ioi2021/vscode-items/vscjava.vscode-java-pack-0.9.1.vsix"
+wget -O /tmp/cpp-compile-run.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/danielpinto8zz6.c-cpp-compile-run-1.0.11.vsix"
+wget -O /tmp/vscodevim.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/vscodevim.vim-1.16.0.vsix"
 ##wget -O /tmp/ms-python.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
 #gunzip /tmp/vscode-java-pack.vsix.gz
 #gunzip /tmp/cpp-compile-run.vsix.gz
