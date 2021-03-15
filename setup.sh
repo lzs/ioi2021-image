@@ -42,7 +42,7 @@ apt -y install net-tools openssh-server ansible xvfb tinc i3lock oathtool imagem
 
 # Install packages needed by contestants
 
-apt -y install  openjdk-11-jre-headless codeblocks emacs \
+apt -y install openjdk-11-jdk-headless codeblocks emacs \
 	geany gedit joe kate kdevelop nano vim vim-gtk3 \
 	ddd valgrind visualvm ruby python3-pip konsole
 
