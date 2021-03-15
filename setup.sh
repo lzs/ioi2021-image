@@ -56,23 +56,23 @@ snap install --classic sublime-text
 # Fix Atom application menu bug
 sudo sed -i 's/Exec=env BAMF_DESKTOP_FILE_HINT=\/var\/lib\/snapd\/desktop\/applications\/atom_atom.desktop \/snap\/bin\/atom ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false \/usr\/bin\/atom %F/Exec=env BAMF_DESKTOP_FILE_HINT=\/var\/lib\/snapd\/desktop\/applications\/atom_atom.desktop ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false \/snap\/bin\/atom %F/' /var/lib/snapd/desktop/applications/atom_atom.desktop
 
-# Install Eclipse (temporarily disabled)
-#wget -O /tmp/eclipse.tar.gz "http://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/2020-06/R/eclipse-cpp-2020-06-R-linux-gtk-x86_64.tar.gz"
-#tar zxf /tmp/eclipse.tar.gz -C /opt
-#rm /tmp/eclipse.tar.gz
+# Install Eclipse (still WIP)
+wget -O /tmp/eclipse.tar.gz "http://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/2020-06/R/eclipse-cpp-2020-06-R-linux-gtk-x86_64.tar.gz"
+tar zxf /tmp/eclipse.tar.gz -C /opt
+rm /tmp/eclipse.tar.gz
 #/opt/eclipse/eclipse -nosplash \
 #        -application org.eclipse.equinox.p2.director \
 #        -repository http://download.eclipse.org/releases/latest/,http://download.eclipse.org/tools/cdt/releases/9.11/ \
 #        -destination /opt/eclipse \
 #        -installIU org.eclipse.cdt.feature.group
-#wget -O /usr/share/pixmaps/eclipse.png "https://icon-icons.com/downloadimage.php?id=94656&root=1381/PNG/64/&file=eclipse_94656.png"
-#cat - <<EOM > /usr/share/applications/eclipse.desktop
-#[Desktop Entry]
-#Name=Eclipse
-#Exec=/opt/eclipse/eclipse
-#Type=Application
-#Icon=eclipse
-#EOM
+wget -O /usr/share/pixmaps/eclipse.png "https://icon-icons.com/downloadimage.php?id=94656&root=1381/PNG/64/&file=eclipse_94656.png"
+cat - <<EOM > /usr/share/applications/eclipse.desktop
+[Desktop Entry]
+Name=Eclipse
+Exec=/opt/eclipse/eclipse
+Type=Application
+Icon=eclipse
+EOM
 
 # Install python3 libraries
 
