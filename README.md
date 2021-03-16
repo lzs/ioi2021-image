@@ -1,4 +1,4 @@
-# ioi2021-image (for garytang only)
+# ioi2021-image
 
 ## Install/Setup
 
