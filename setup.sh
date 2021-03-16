@@ -14,7 +14,7 @@ error() {
 trap 'error ${LINENO}' ERR
 
 VERSION="test$(date +%m%d)"
-ANSIBLE_PASSWD="random"
+ANSIBLE_PASSWD=""
 
 if [ -f "config.local.sh" ]; then
 	source config.local.sh
@@ -99,9 +99,7 @@ wget -O /tmp/cpptools-linux.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/
 wget -O /tmp/cpp-compile-run.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/danielpinto8zz6.c-cpp-compile-run-1.0.11.vsix"
 wget -O /tmp/vscodevim.vsix "http://mirror.nus.edu.sg/ioi2021/vscode-items/vscodevim.vim-1.16.0.vsix"
 ##wget -O /tmp/ms-python.vsix "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-python/vsextensions/python/2020.7.96456/vspackage"
-#gunzip /tmp/vscode-java-pack.vsix.gz
-#gunzip /tmp/cpp-compile-run.vsix.gz
-#gunzip /tmp/vscodevim.vsix.gz
+##gunzip /tmp/vscode-java-pack.vsix.gz
 ##gunzip /tmp/ms-python.vsix.gz
 mkdir /tmp/vscode
 mkdir /tmp/vscode-extensions
